@@ -1,10 +1,11 @@
 const express = require('express')
 const cors = require('cors')
+const app = express()
 let port = process.env.PORT || 5000
 
 const productsRoute = require('./routes/productsRoute')
 
-const app = express()
+
 const config = {
     application: {
         cors: {
