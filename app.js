@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+let port = process.env.PORT || 5000
 
 const productsRoute = require('./routes/productsRoute')
 
@@ -19,6 +20,9 @@ const config = {
 app.use(cors(
     config.application.cors.server
 ))
+app.get('/', (req, res) => {
+    res.send('Api products')
+})
 app.use('/api/products', productsRoute)
 
-app.listen(5000)
+app.listen(port)

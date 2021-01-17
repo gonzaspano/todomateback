@@ -5,4 +5,5 @@ const productsControllers = require('../controllers/productsControllers')
 
 router.get('/all', productsControllers.getAll)
 
+
 module.exports = router
